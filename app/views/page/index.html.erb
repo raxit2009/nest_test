@@ -1,0 +1,15 @@
+<div>
+	<div class = "left" style = "width:50%;">
+		<% @page.each do |page| %>
+			<h3 style = "margin-top:10px;background-color: #CDCDCD;border-radius: 10px;float: left;height: 35px;margin-left: 20px;padding-top: 15px;text-align: center;width: 100px;"><%= page.name%></h3>
+		<%end%>
+	</div>
+	<div class = "right" style = "width:50%;border-left: 1px dotted;">
+		<% @category.each do |category| %>
+			<h3 style = "background-color: #CDCDCD;height: 30px;width: 200px;"><%= category.name%></h3>
+			<% category.sub_categories.each do |sb_cat|%>
+				<h3 style = "margin-left:20px;background-color: #CDCDCD;height: 30px;width: 180px;"><%= sb_cat.name %></h3>
+			<%end%>
+		<%end%>
+	</div>
+</div>
